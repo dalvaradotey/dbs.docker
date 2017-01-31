@@ -30,8 +30,6 @@ mongodata:
   volumes:
     - /data/db
   command: --break-mongo
-# use script for users create 
-# dcrun mongo mongo --host DOCKER_HOST_IP < ~/path/to/mongo-user-script.js
 
 mongo:  
   image: mongo:latest
@@ -40,4 +38,3 @@ mongo:
   ports:
     - "27017:27017"
   command: --smallfiles --rest --auth
-# -> remember disable --auth first run time script
